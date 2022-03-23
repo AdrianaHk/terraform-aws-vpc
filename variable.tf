@@ -26,3 +26,13 @@ variable "nat_gateway_destination_cidr_block" {
   type        = string
   default     = "0.0.0.0/0"
 }
+
+variable "public_subnets_id" {
+    type = list
+}
+
+variable "create_nat_gateway_route" {
+  description = "Controls if a nat gateway route should be created to give internet access to the subnets"
+  type        = bool
+  default     = true
+}
